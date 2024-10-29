@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        body {
+            height: 100vh;                      
+                                  
+            display: flex;                       
+            flex-direction: column;              
+            justify-content: center;             
+            align-items: center;                 
+            background-color: #f0f2f5;         
+        }
+
+        h1 {
+            font-size: 30px;                    
+            color: rgb(25, 97, 186);            
+            text-align: center;                 
+            margin-bottom: 10px;                 
+        }
+
+        p {
+            font-size: 15px;                    
+            color: rgb(1, 1, 1);               
+            text-align: center;                  
+            margin-bottom: 20px;                
+        }
+
+        .input-container {
+            width: 300px;                        
+            margin-bottom: 10px;                
+        }
+
+        input[type="email"], input[type="password"] {
+            padding: 10px;                       
+            font-size: 15px;                     
+            width: 100%;                         
+            border: 1px solid #ccc;              
+            border-radius: 5px;                  
+            outline: none;                       
+            background-color: rgb(253, 253, 253); 
+        }
+
+        input[type="submit"] {
+            padding: 10px ;                 
+            font-size: 15px;                     
+            color: white;                       
+            background-color: #3b5998;         
+            border: solid;                        
+            border-radius: 5px;                 
+            cursor: pointer;                    
+            width: 100%;                      
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #365e9d;          
+        }
+        forgotten-account{
+            margin-top: 15px;                  
+            font-size: 12px;                    
+            color: rgb(254, 254, 254);        
+            text-decoration: none;  
+                        
+        }
+        
+      
+    </style>
+</head>
+
+<body>
+    <h1>Facebook</h1>
+    <p>Log in to Facebook</p>
+    <form>
+        <div class="input-container">
+            <input type="email" placeholder="Email address or phone number" required>
+        </div>
+        <div class="input-container">
+            <input type="password" placeholder="Password" required>
+        </div>
+       
+        <div class="input-container">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <a href="https://www.facebook.com" class="forgotten-account">Forgot password?</a>
+
+</body>
+</html>
