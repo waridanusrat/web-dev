@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+      
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            width: 100vw;
+            height: 50vh;
+            padding: 10px;
+          
+            
+        }
+
+        
+        .box {
+            display: inline-block;
+           
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+
+    
+        .box-1 img {
+            width: 100%;
+            height: 200px;
+           
+            
+           
+        }
+
+       
+        .sub-box {
+            display: flex;
+            width: 100%;
+        }
+
+        .box-2 img.logo {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+           
+        }
+
+        
+        .title {
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0;
+        }
+       
+
+        .info {
+            color: gray;
+            font-size: 14px;
+            margin: 0;
+        }
+        button{
+    background-color: rgb(32, 32, 200);
+    padding: 12px;
+    border: none;
+    font-weight: bold;
+    margin-bottom: 100px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+   
+    
+}
+button:hover{
+    background-color: rgb(87, 157, 217);
+    color: rgb(83, 73, 221);
+}
+    </style>
+</head>
+<body>
+
+   
+    <div class="image-grid">
+       
+       
+        <div class="box">
+            <div class="box-1">
+                <img src="/media/tom.jpg" alt="Tom">
+            </div>
+            <div class="sub-box">
+                <div class="box-2">
+                    <img class="logo" src="/media/tom.jpg" alt="Logo">
+                </div>
+                <div class="box-3">
+                    <p class="title">Tom</p>
+                   
+                    <p class="info">5 Mutual Friends</p>
+                    <button>Add Friend</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="box-1">
+                <img src="/media/jerry.jpg" alt="Jerry">
+            </div>
+            <div class="sub-box">
+                <div class="box-2">
+                    <img class="logo" src="/media/jerry.jpg" alt="Logo">
+                </div>
+                <div class="box-3">
+                    <p class="title">Jerry</p>
+                   
+                    <p class="info">3 Mutual Friends</p>
+                    <button>Add Friend</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-1">
+                <img src="/media/spike.jpg" alt="spike">
+            </div>
+            <div class="sub-box">
+                <div class="box-2">
+                    <img class="logo" src="/media/spike.jpg" alt="Logo">
+                </div>
+                <div class="box-3">
+                    <p class="title">Spike</p>
+                    <p class="info">5 Mutual Friends</p>
+                    <button>Add Friend</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-1">
+                <img src="/media/jerry's cousin.png" alt="jerry's_cousin">
+            </div>
+            <div class="sub-box">
+                <div class="box-2">
+                    <img class="logo" src="/media/jerry's cousin.png" alt="Logo">
+                </div>
+                <div class="box-3">
+                    <p class="title">Jerry's Cousin</p>
+                    <p class="info">5 Mutual Friends</p>
+                    <button>Add Friend</button>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+</body>
+</html>
