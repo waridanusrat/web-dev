@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+     
+    
+        .webpage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            gap: 20px;
+        }
+
+     
+        h1 {
+            font-size: 70px;
+            color: black;
+            text-align: center;
+        }
+
+        .page-1 .container-1 {
+            position: relative;
+            width: 80vw;
+            height: 80vh;
+            background: url('/media/image.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: absolute;
+            bottom: 0;
+            left: 25px;
+        }
+
+        .image-container p {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .image-container .mountain {
+            font-size: 150px;
+            color: white;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        .image-container form {
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            width: 250px;
+            background-color: white;
+        }
+
+        input[type="submit"] {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: white;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(87, 157, 217);
+            color: white;
+        }
+
+        .page-2 .container-2 {
+            display: flex;
+            width: 80vw;
+            height: 80vh;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .video-1 {
+            width: 70%;
+            position: relative;
+        }
+
+        .video-1 video {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .video-1 .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 24px;
+            color: white;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: transparent;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .video-1.button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .text-section {
+            width: 30%;
+            background-color: #eaf0e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .text-section h1 {
+            font-size: 2.5em;
+            color: #333;
+            line-height: 1.2;
+        }
+
+      
+        .page-3 .container-3 {
+            display: flex;
+            width: 80vw;
+            height: 80vh;
+            border-radius: 15px;
+         
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .video-2 {
+            width: 100%;
+            position: relative;
+        }
+
+        .video-2 video {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .heading {
+            position: absolute;
+            top: 15%;
+            left: 19%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 2;
+        }
+
+        .button-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    padding: 6%; 
+    position: absolute;
+    bottom: 60px; 
+}
+
+.button-1, .button-2, .button-3 {
+    flex: 1; 
+    margin: 0 20px; 
+    padding: 15px 20px;
+    font-size: 15px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+  
+}
+
+        .quote{
+            margin-top: 210px;
+            margin-bottom: 170px;
+         
+            text-align: center;
+        }
+        .quote .text-1{
+           
+            font-size: 90px;
+
+        }
+        .quote .text-2{
+        margin-top: 20px;
+        font-size: 15px;
+
+        }
+        .quote .text-3 {
+            margin-top: 110px;
+    
+    background-color: black; 
+    color:white;
+    padding: 15px;
+    z-index: 100; 
+    font-size: 16px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="webpage page-1">
+        <h1>Your Mountain Journey</h1>
+        <div class="container-1">
+            <div class="image-container">
+                <p>Integrate data from all your apps into a single platform, with <br> perfect memory and predictive capabilities.</p>
+                <p class="mountain">MOUNTAIN</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <input type="submit" value="Climb With Us!">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="webpage page-2">
+        <div class="container-2">
+            <div class="video-1">
+                <video autoplay muted loop>
+                    <source src="/media/video-1.mp4" type="video/mp4">
+                    
+                </video>
+                <div class="button">Let's Climb</div>
+            </div>
+            <div class="text-section">
+                <h1>See Above <br> Your <br> Imagination</h1>
+            </div>
+        </div>
+    </div>
+
+  
+  <div class="webpage page-3">
+        <div class="container-3">
+            <div class="video-2">
+                <video autoplay muted loop>
+                    <source src="/media/video-2.mp4" type="video/mp4">
+                </video>
+                <div class="heading">
+                    Climb into <br>Peak
+                </div>
+               
+                <div class="button-container">
+                    <div class="button-1">Make Informed Decisions<br> <br>Use data-driven insights to confidently plan <br> your future decisions.</div>
+                    <div class="button-2">Get Ahead with Personalized Suggestions <br><br>Unlock ideas you never saw coming—project <br> proposals, emails, DMs, and custom gifts.</div>
+                    <div class="button-3">Plan Memorable Events<br> <br>Get customized advice for planning your next <br>trip, dinner, or meeting.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quote">
+        <div class="text-1">We Climb What <br>
+            We See.</div>
+            <div class="text-2">At the heart of our process is a deep-seated belief in the quality and potential of
+                MindPalace. <br> Before anything reaches your hands, it undergoes rigorous testing and
+                scrutiny. <br> We stand behind every feature, every security measure, and every innovation, <br>
+                ensuring that each meets our high standards.</div>
+                <div class="text-3">  Team Privacy</div>
+
+    </div>
+    
+
+</body>
+</html>
